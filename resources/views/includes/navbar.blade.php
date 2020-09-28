@@ -34,8 +34,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact-us-page') }}">{{ $navbar->contact ?? '' }}</a>
                 </li>
-                <li class="lh-55px mr-3"><a href="#test-popup" class="open-popup-link btn login-btn mr-im">Log in</a></li>
-                <li class="lh-55px"><a href="#signup-popup" class="open-signup-link btn login-btn login-last">Signup </a></li>
+                {{-- <li class="lh-55px mr-3"><a href="#test-popup" class="open-popup-link btn login-btn mr-im">Log in</a></li>
+                <li class="lh-55px"><a href="#signup-popup" class="open-signup-link btn login-btn login-last">Signup </a></li> --}}
             </ul>
         </div>
     </div>

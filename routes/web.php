@@ -85,6 +85,8 @@ Route::group(['middleware' => ['auth' , 'role:Administrator' ]], function () {
 
   // User Management
   Route::get('home/users', 'Home\\UserController@index' )->name('users.index');
+  Route::get('home/users/create', 'Home\\UserController@create' )->name('users.create');
+  Route::post('home/users', 'Home\\UserController@store' )->name('users.store');
   Route::get('home/users/{id}/edit', 'Home\\UserController@edit' )->name('users.edit');
   Route::patch('home/users/{id}', 'Home\\UserController@update' )->name('users.update');
 

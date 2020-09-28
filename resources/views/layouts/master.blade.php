@@ -34,7 +34,7 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Login Area Start ##### -->
-    @include('includes.login')
+    {{-- @include('includes.login') --}}
     <!-- ##### Login Area End ##### -->
 
     <!-- ##### Content Area Start ##### -->
