@@ -24,6 +24,7 @@ use App\Home\Testimonial;
 use App\Home\TestimonialHead;
 use App\Home\WhoWe;
 use App\Home\WhoWeFeature;
+use App\Home\Footer;
 
 class DataSeeder extends Seeder
 {
@@ -232,5 +233,19 @@ class DataSeeder extends Seeder
           'description' => $description,
         ]);
 
+        // Contact Us Data
+        Footer::create([
+          'logo_name' => 'Dorma',
+          'description' => $description,
+          'mail_address' => 'Mailing Address:xx00 E. Union Ave',
+          'address' => 'Suite 1100. Denver, CO 80237',
+          'phone' => '+999 90932 627',
+          'email' => 'support@yourdomain.com',
+          'facebook' => 'http://www.facebook.com',
+          'twitter' => 'http://www.twitter.com',
+          'instagram' => 'http://www.instagram.com',
+          'google_plus' => 'http://www.google.com',
+          'linkedin' => 'http://www.linkedin.com',
+        ]);
     }
 }

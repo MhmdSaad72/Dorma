@@ -6,17 +6,17 @@
                     <!-- Copywrite -->
                     <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
                         <div class="footer-logo">
-                            <a href="#"><img src="{{ isset($navbar->logo) ? asset('storage/' . $navbar->logo) : 'img/core-img/logo.png'}}" alt="logo"> {{ $navbar->logo_name ?? '' }} </a>
+                            <a href="#"><img src="{{ isset($footer->logo) ? asset('storage/' . $footer->logo) : 'img/core-img/logo.png'}}" alt="logo"> {{ $footer->logo_name ?? '' }} </a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus voluptatibus neque illo id repellat quisquam? Autem expedita earum quae laborum ipsum ad.</p>
+                        <p>{{ $footer->description ?? '' }}</p>
                     </div>
                     <!-- Social Icon -->
                     <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="{{ $footer->facebook ?? '' }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="{{ $footer->twitter ?? '' }}"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="{{ $footer->google_plus ?? '' }}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        <a href="{{ $footer->instagram ?? '' }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="{{ $footer->linkedin ?? '' }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -50,20 +50,23 @@
                 <div class="contact_info_area d-sm-flex justify-content-between">
                     <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
                         <h5>NAVIGATE</h5>
-                        <a href="">
-                            <p>Advertisers</p>
+                        <a href="{{ route('home-page.index') }}">
+                            <p>Home</p>
                         </a>
-                        <a href="">
-                            <p>Developers</p>
+                        <a href="{{ route('about-us-page') }}">
+                            <p>About Us</p>
                         </a>
-                        <a href="">
-                            <p>Resources</p>
+                        <a href="{{ route('services-page') }}">
+                            <p>Services</p>
                         </a>
-                        <a href="">
-                            <p>Company</p>
+                        <a href="{{ route('pricing-page') }}">
+                            <p>Pricing Plans</p>
                         </a>
-                        <a href="">
-                            <p>Connect</p>
+                        <a href="{{ route('faq-page') }}">
+                            <p>FAQ</p>
+                        </a>
+                        <a href="{{ route('contact-us-page') }}">
+                            <p>Contact Us</p>
                         </a>
                     </div>
                 </div>
@@ -75,11 +78,10 @@
                     <!-- Content Info -->
                     <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
                         <h5>CONTACT US</h5>
-                        <p>Mailing Address:xx00 E. Union Ave</p>
-                        <p>Suite 1100. Denver, CO 80237</p>
-                        <p>+999 90932 627</p>
-                        <p>support
-                            @yourdomain.com</p>
+                        <p>{{ $footer->mail_address ?? '' }}</p>
+                        <p>{{ $footer->address ?? '' }}</p>
+                        <p>{{ $footer->phone ?? '' }}</p>
+                        <p>{{ $footer->email ?? '' }}</p>
                     </div>
                 </div>
             </div>

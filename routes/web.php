@@ -20,6 +20,10 @@ Route::group(['middleware' => ['auth' , 'role:Administrator' ]], function () {
   Route::get('home/hero-section/{id}/edit', 'Home\\HeroSectionController@edit' )->name('hero-section.edit');
   Route::patch('home/hero-section/{id}', 'Home\\HeroSectionController@update' )->name('hero-section.update');
 
+  // Footer Section
+  Route::get('home/footer/{id}/edit', 'Home\\FooterController@edit' )->name('footer.edit');
+  Route::patch('home/footer/{id}', 'Home\\FooterController@update' )->name('footer.update');
+
   // Contact Section
   Route::get('home/contact-section/{id}/edit', 'Home\\ContactSectionController@edit' )->name('contact-section.edit');
   Route::patch('home/contact-section/{id}', 'Home\\ContactSectionController@update' )->name('contact-section.update');

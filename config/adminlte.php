@@ -293,6 +293,10 @@ return [
                     'text' => 'Contact Page ',
                     'url'  => 'home/contact-section/1/edit',
                 ],
+                [
+                    'text' => 'Footer Section ',
+                    'url'  => 'home/footer/1/edit',
+                ],
             ],
         ],
         [

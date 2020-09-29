@@ -27,6 +27,7 @@ use App\Home\PartnerHead;
 use App\Home\Partner;
 use App\Home\TestimonialHead;
 use App\Home\Testimonial;
+use App\Home\Footer;
 use App\Page\Subscribe;
 use App\User;
 use \Carbon\Carbon;
@@ -40,7 +41,8 @@ class HomeController extends Controller
     public function index()
     {
       $navbar = NavBar::first();
-      return view('pages.home.index' , compact('navbar'));
+      $footer = Footer::first();
+      return view('pages.home.index' , compact('navbar', 'footer'));
     }
 
 
@@ -77,6 +79,7 @@ class HomeController extends Controller
       $pricing = Pricing::first();
       $team_head = TeamHead::first();
       $partner_head = PartnerHead::first();
+      $footer = Footer::first();
       $advantages = SideFeature::all();
       $whowe_features = WhoWeFeature::all();
       $servicebody = ServiceBody::all();
@@ -89,7 +92,7 @@ class HomeController extends Controller
       return view('pages.home.index-demo-1' , compact('navbar' , 'herosection' , 'advantages' , 'whowe' ,
        'whowe_features' , 'subscribe' , 'servicehead' , 'servicebody' , 'featurehead' , 'featurebody' , 'info_image' ,
        'informations' , 'faq_questions' , 'question' , 'pricing' , 'prices' , 'team_head' , 'team_members' ,
-       'partner_head' , 'partners'
+       'partner_head' , 'partners', 'footer'
      ));
     }
 
@@ -110,6 +113,7 @@ class HomeController extends Controller
       $pricing = Pricing::first();
       $team_head = TeamHead::first();
       $partner_head = PartnerHead::first();
+      $footer = Footer::first();
       $whowe_features = WhoWeFeature::all();
       $servicebody = ServiceBody::all();
       $featurebody = FeatureBody::all();
@@ -121,7 +125,7 @@ class HomeController extends Controller
       return view('pages.home.index-demo-2' , compact('navbar' , 'herosection'  , 'whowe' , 'whowe_features' ,
        'subscribe' , 'servicehead' , 'servicebody' , 'featurehead' , 'featurebody' , 'info_image' ,
        'informations' , 'faq_questions' , 'question' , 'pricing' , 'prices' , 'team_head' , 'team_members' ,
-       'partner_head' , 'partners'
+       'partner_head' , 'partners', 'footer'
      ));
     }
 
