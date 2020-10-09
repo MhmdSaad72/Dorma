@@ -59,7 +59,7 @@ class HomeController extends Controller
       $team_members = Team::all()->count();
       $services = ServiceBody::all()->count();
       $subscribes = Subscribe::all()->count();
-      $team_member = Team::all();
+      $team_member = Team::latest()->take(5)->get();
       return view('admin.dashboard' , compact('users' , 'services' , 'team_members' , 'pricing' , 'subscribes' , 'team_member'));
     }
 
